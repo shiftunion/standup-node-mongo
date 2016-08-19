@@ -8,6 +8,11 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+var mongoose = require('mongoose');
+mongoose.connect('localhost:27017');
+//ToDo: Might need a user here
+
+
 var app = express();
 
 // assign the swig view engine .html file
