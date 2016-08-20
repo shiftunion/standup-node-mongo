@@ -9,7 +9,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var mongoose = require('mongoose');
-mongoose.connect('localhost:27017');
+mongoose.connect('localhost:27017/Standup-Mongoose');
 //ToDo: Might need a user here
 
 
