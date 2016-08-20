@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema  = mongoose.Schema;
 
-var standupSchema = new Schema({
+var standUpSchema = new Schema({
     memberName: String,
     project: String,
     workYesterday: String,
@@ -11,4 +11,4 @@ var standupSchema = new Schema({
 });
 
 
-module.exports = mongoose.model('Standup', standupSchema);
+module.exports = mongoose.model('StandUp', standUpSchema);

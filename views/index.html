@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>{{ title }}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
-  </body>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"/>
+</head>
+<h1>{{ title }}</h1>
+<p>
+    Welcome to {{ title }}
+</p>
+
+<div class="container">
+    <div class="col-md-12 column list-group">
+        {% for note in notes %}
+        <hr/>
+        <div class="list-group-item">
+            <div>
+                Member : <em><strong>{{note.memberName}}</strong></em>
+            </div>
+            <div>
+                Project : <em><strong>{{note.project}}</strong></em>
+            </div>
+            <div>
+                workYesterday : <em><strong>{{note.workYesterday}}</strong></em>
+            </div>
+            <div>
+                workToday : <em><strong>{{note.workToday}}</strong></em>
+            </div>
+            <div>
+                impediment : <em><strong>{{note.impediment}}</strong></em>
+            </div>
+
+            <div>
+                Created on : <em><strong>{{note.createOn}}</strong></em>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</body>
 </html>

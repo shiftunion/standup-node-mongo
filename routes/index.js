@@ -1,23 +1,23 @@
 var express = require('express');
 var router = express.Router();
-var standupCtrl = require('../controllers/standup.server.controller.js');
+var standUpCtrl = require('../controllers/standup.server.controller.js');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
 
-    res.render('index', {title: 'Express'});
+    return standUpCtrl.list(req, res);
 
 });
 
 router.get('/newnote', function (req, res) {
 
-    return standupCtrl.getNote(req, res)
+    return standUpCtrl.getNote(req, res)
 
 });
 
 router.post('/newnote', function (req, res) {
 
-    return standupCtrl.create(req, res);
+    return standUpCtrl.create(req, res);
 
 });
 
