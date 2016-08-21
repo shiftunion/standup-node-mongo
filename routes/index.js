@@ -9,6 +9,13 @@ router.get('/', function (req, res, next) {
 
 });
 
+// we have memeber filter
+router.post('/', function (req, res, next) {
+
+    return standUpCtrl.filterByMember(req, res);
+
+});
+
 router.get('/newnote', function (req, res) {
 
     return standUpCtrl.getNote(req, res)

@@ -11,6 +11,32 @@
     Welcome to {{ title }}
 </p>
 
+
+<div class="container">
+    <!--Filter notes list by member name-->
+    <form action="/" method="post">
+        <div class="row clearfix">
+            <div class="col-md-4 column">
+                <select id="memberName" name="memberName" class="form-control">
+                    <option value="none">(Show All Members)</option>
+                    <option value="Mark">Mark</option>
+                    <option value="David">David</option>
+                    <option value="John">John</option>
+                    <option value="Mary">Mary</option>
+                    <option value="Bob">Bob</option>
+                </select>
+            </div>
+            <div class="col-md-8 column">
+                <!-- Button -->
+                <button id="btnFilterNotes" name="btnFilterNotes" class="btn btn-primary" type="submit">Filter
+                    Notes...
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+<br/>
+
 <div class="container">
     <div class="col-md-12 column list-group">
         {% for note in notes %}
